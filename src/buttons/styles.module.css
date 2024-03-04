@@ -1,5 +1,5 @@
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: #4caf50; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -9,18 +9,17 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-
 }
 .button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
 .primary {
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
 .secondary {
-  background-color: #008CBA;
+  background-color: #008cba;
 }
 .danger {
   background-color: #f44336;
@@ -29,7 +28,6 @@
 .loading {
   background-color: #ccc;
 }
-
 
 .rounded {
   border-radius: 12px;

@@ -1,21 +1,28 @@
-import { JSX, splitProps } from "solid-js";
+import { JSX, splitProps } from 'solid-js'
 
-import styles from "./styles.module.css";
+import styles from './styles.module.css'
 
 interface ButtonLocalProps {
-  icon?: boolean;
-  primary?: boolean;
-  size?: "small" | "medium" | "large";
-  rounded?: boolean;
-  disabled?: boolean;
-  loading?: boolean;
+  icon?: boolean
+  primary?: boolean
+  size?: 'small' | 'medium' | 'large'
+  rounded?: boolean
+  disabled?: boolean
+  loading?: boolean
 }
 
 // Extend props of button component
-type ButtonProps = ButtonLocalProps & JSX.ButtonHTMLAttributes<HTMLButtonElement>;
+type ButtonProps = ButtonLocalProps & JSX.ButtonHTMLAttributes<HTMLButtonElement>
 
 export const Button = (props: ButtonProps) => {
-  const [local, ...rest] = splitProps(props, ["icon", "primary", "size", "rounded", "disabled", "loading"] as const)
+  const [local, ...rest] = splitProps(props, [
+    'icon',
+    'primary',
+    'size',
+    'rounded',
+    'disabled',
+    'loading',
+  ] as const)
 
   return (
     <button
@@ -30,4 +37,4 @@ export const Button = (props: ButtonProps) => {
       {...rest}
     />
   )
-};
+}
