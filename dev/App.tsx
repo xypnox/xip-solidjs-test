@@ -1,7 +1,7 @@
 import type { Component } from 'solid-js'
 import logo from './logo.svg'
 import styles from './App.module.css'
-import { Hello } from '../src'
+import { Button } from '../src'
 
 const App: Component = () => {
   return (
@@ -9,7 +9,11 @@ const App: Component = () => {
       <header class={styles.header}>
         <img src={logo} class={styles.logo} alt="logo" />
         <h1>
-          <Hello></Hello>
+          <Button primary
+            onClick={() => {
+              console.log('clicked')
+            }}
+          >My button</Button>
         </h1>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
