@@ -9,11 +9,14 @@ const App: Component = () => {
       <header class={styles.header}>
         <img src={logo} class={styles.logo} alt="logo" />
         <h1>
-          <Button primary
+          <Button
+            primary
             onClick={() => {
               console.log('clicked')
             }}
-          >My button</Button>
+          >
+            My button
+          </Button>
         </h1>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
