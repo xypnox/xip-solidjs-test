@@ -15,26 +15,26 @@ interface ButtonLocalProps {
 type ButtonProps = ButtonLocalProps & JSX.ButtonHTMLAttributes<HTMLButtonElement>
 
 export const Button = (props: ButtonProps) => {
-  const [local, ...rest] = splitProps(props, [
+  const [local, rest] = splitProps(props, [
     'icon',
     'primary',
     'size',
     'rounded',
     'disabled',
     'loading',
-  ] as const)
+  ] as const);
 
   return (
-    <button
-      class={styles.button}
+    <button {...rest}
       classList={{
-        [styles.primary]: local.primary,
-        [styles.rounded]: local.rounded,
-        [styles.loading]: local.loading,
-        [styles.icon]: local.icon,
+        [styles.button!]: true,
+        [styles.icon!]: local.icon,
+        [styles.primary!]: local.primary,
+        [styles.small!]: local.size === 'small',
+        [styles.medium!]: local.size === 'medium',
       }}
-      disabled={local.disabled}
-      {...rest}
-    />
+    >
+      {props.children}
+    </button>
   )
 }
